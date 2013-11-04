@@ -1,4 +1,4 @@
-Copyright (c) 2013 Adam Pohorecki
+Copyright (c) 2013 Gitorious AS
 
 MIT License
 

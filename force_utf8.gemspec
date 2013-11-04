@@ -8,9 +8,9 @@ Gem::Specification.new do |spec|
   spec.version       = ForceUtf8::VERSION
   spec.authors       = ["Adam Pohorecki"]
   spec.email         = ["adam@pohorecki.pl"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
-  spec.homepage      = ""
+  spec.description   = %q{Convert any Ruby string to UTF8.}
+  spec.summary       = %q{Convert any Ruby string to UTF8.}
+  spec.homepage      = "https://gitorious.org/gitorious/force_utf8"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
