@@ -1,5 +1,3 @@
 require "force_utf8/version"
-
-module ForceUtf8
-  # Your code goes here...
-end
+require "force_utf8/encode"
+require "force_utf8/core_ext"

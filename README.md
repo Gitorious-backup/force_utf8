@@ -1,6 +1,6 @@
 # ForceUtf8
 
-TODO: Write a gem description
+ForceUtf8 is a library that allows you to convert any Ruby string into a string encoded in UTF-8. It replaces any unknown characters with question marks.
 
 ## Installation
 
@@ -18,7 +18,19 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+### Monkey-patched version
+
+    require 'force_utf8'
+
+    "foo\xCFbar".force_utf8 # returns "foo?bar"
+    "foo\xCFbar".force_utf8! # mutates string into "foo?bar"
+
+### Global function
+
+    require 'force_utf8/encode'
+
+    ForceUtf8::Encode.encode("foo\xCFbar") # returns "foo?bar"
+    ForceUtf8::Encode.encode!("foo\xCFbar") # mutates string into "foo?bar"
 
 ## Contributing
 

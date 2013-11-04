@@ -1,8 +1,24 @@
 # encoding: utf-8
 
-require_relative '../../lib/force_utf8/encode.rb'
+require "force_utf8"
 
 describe ForceUtf8::Encode do
+  context "monkey patches" do
+    it "includes the mutating extension" do
+      str = "żółć\xCF"
+      str.force_utf8!
+
+      str.should == "żółć?"
+    end
+
+    it "includes the immutable extension" do
+      str = "żółć\xCF"
+
+      str.force_utf8.should == "żółć?"
+      str.should == "żółć\xCF"
+    end
+  end
+
   context "encode!" do
     it "does not replace valid UTF-8 chars" do
       str = "żółć"
